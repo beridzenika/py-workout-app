@@ -1,0 +1,246 @@
+{
+    "current_day": 2,
+    "after_num": 5,
+    "before": [
+        {
+            "exercise": "cardio",
+            "type": "time",
+            "duration": 3,
+            "set": 1
+        },
+        {
+            "exercise": "World's Greatest Stretch",
+            "type": "reps",
+            "rep": 10,
+            "set": 1
+        },
+        {
+            "exercise": "Down Dog to Plank Flow",
+            "type": "reps",
+            "rep": 10,
+            "set": 1
+        },
+        {
+            "exercise": "Arm Circles",
+            "type": "reps",
+            "rep": 20,
+            "set": 1
+        }
+    ],
+    "after": [
+        {
+            "exercise": "Forward fold",
+            "type": "time",
+            "duration": 3,
+            "set": 1
+        },
+        {
+            "exercise": "Quad Stretch",
+            "type": "time",
+            "duration": 3,
+            "set": 1
+        },
+        {
+            "exercise": "Butterfly stretch",
+            "type": "time",
+            "duration": 3,
+            "set": 1
+        },
+        {
+            "exercise": "Lunge stretch",
+            "type": "time",
+            "duration": 3,
+            "set": 1
+        },
+        {
+            "exercise": "Shoulder stretch across body",
+            "type": "time",
+            "duration": 3,
+            "set": 1
+        },
+        {
+            "exercise": "Chest opener",
+            "type": "time",
+            "duration": 30,
+            "set": 1
+        },
+        {
+            "exercise": "Child's pose",
+            "type": "time",
+            "duration": 30,
+            "set": 1
+        },
+        {
+            "exercise": "Pancake stretch",
+            "type": "time",
+            "duration": 30,
+            "set": 1
+        },
+        {
+            "exercise": "Cobra pose",
+            "type": "time",
+            "duration": 30,
+            "set": 1
+        }
+    ],
+    "days": {
+        "1": {
+            "muscles": "Chest & Shoulders",
+            "exercises": [
+                {
+                    "exercise": "Incline Push-ups",
+                    "type": "reps",
+                    "rep": 10,
+                    "set": 3
+                },
+                {
+                    "exercise": "Standard Push-ups",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Pike Push-ups",
+                    "type": "reps",
+                    "rep": 6,
+                    "set": 3
+                },
+                {
+                    "exercise": "Dips on Chair/Bench",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Triceps Extensions",
+                    "type": "reps",
+                    "rep": 10,
+                    "set": 3
+                }
+            ]
+        },
+        "2": {
+            "muscles": "Back & Biceps",
+            "exercises": [
+                {
+                    "exercise": "Door/Towel Rows",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Negative Pull-ups",
+                    "type": "reps",
+                    "rep": 3,
+                    "set": 3
+                },
+                {
+                    "exercise": "Inverted Rows under a table",
+                    "type": "reps",
+                    "rep": 6,
+                    "set": 3
+                },
+                {
+                    "exercise": "Bicep curls using a towel",
+                    "type": "reps",
+                    "rep": 3,
+                    "set": 3
+                },
+                {
+                    "exercise": "Superman hold",
+                    "type": "time",
+                    "duration": 20,
+                    "set": 3
+                }
+            ]
+        },
+        "3": {
+            "muscles": "Leg",
+            "exercises": [
+                {
+                    "exercise": "Bodyweight Squats",
+                    "type": "reps",
+                    "rep": 15,
+                    "set": 3
+                },
+                {
+                    "exercise": "Bulgarian Split Squats",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Glute Bridges",
+                    "type": "reps",
+                    "rep": 12,
+                    "set": 3
+                },
+                {
+                    "exercise": "Wall Sit",
+                    "type": "time",
+                    "duration": "max hold",
+                    "set": 3
+                },
+                {
+                    "exercise": "Calf Raises",
+                    "type": "time",
+                    "duration": 60,
+                    "set": 3
+                },
+                {
+                    "exercise": "Plank",
+                    "type": "time",
+                    "duration": 3,
+                    "set": 3
+                },
+                {
+                    "exercise": "Leg Raises",
+                    "type": "reps",
+                    "rep": 10,
+                    "set": 3
+                },
+                {
+                    "exercise": "Hollow Hold",
+                    "type": "time",
+                    "duration": 30,
+                    "set": 3
+                }
+            ]
+        },
+        "4": {
+            "muscles": "Flexibility",
+            "exercises": [
+                {
+                    "exercise": "Burpees",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Jump Squats",
+                    "type": "reps",
+                    "rep": 10,
+                    "set": 3
+                },
+                {
+                    "exercise": "Push-up to Downward Dog",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Mountain Climbers",
+                    "type": "reps",
+                    "rep": 20,
+                    "set": 3
+                },
+                {
+                    "exercise": "Plank Shoulder Taps",
+                    "type": "reps",
+                    "rep": 20,
+                    "set": 3
+                }
+            ]
+        }
+    }
+}
