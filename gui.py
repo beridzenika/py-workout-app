@@ -8,6 +8,8 @@ class GUI:
         self.after_num = self.data["after_num"]
         self.steps = self.data["plan"]
         self.current_step = 0
+        self.active_i = None # which button is activated
+        self.dilation = None # root after for time functions
         self.li_buttons = []
 
         self.root = tk.Tk() # initiate window entrance
@@ -46,19 +48,40 @@ class GUI:
         self.finish_button.pack() # show finish button
 
     def set_button(self, i, exercise):
-        #if has time duration
-        if exercise["type"] == "time" and isinstance(exercise["duration"], int):
-            self.li_buttons[i].config(state=tk.DISABLED,)  #freezing the button    
+        # is other buttons arent activated
+        if self.active_i is None:
+            #if has time duration
+            if exercise["type"] == "time":
+                self.active_i = i #freezing the button  
+                if isinstance(exercise["duration"], int):
+                    self.timer(exercise["duration"], exercise, i) # starting timer for remaining amount time
+                elif exercise["duration"] == "max hold":
+                    self.stopwatch(0, exercise, i) # starting stopwatch
+            else: # for just reps
+                self.complete_set(exercise, i) # decrease set/delete
+        elif self.active_i == i:
+            self.active_i = None # deactivate buttons
+            self.root.after_cancel(self.dilation) # stop dilation
+            self.complete_set(exercise, i) # decrease set/delete        
+    
+    def stopwatch (self, record, exercise, i): 
+        time_text = self.time_text(record)
+        self.li_buttons[i].config(text=f"{exercise["exercise"]} - {exercise["set"]} sets x max: {time_text}")
+        
+        if self.active_i == i: # recurse if it's active
+            self.dilation = self.root.after(1000, lambda: self.stopwatch(record+1, exercise, i))
 
-            remaining = exercise["duration"]
-            self.timer(remaining, exercise, i) # turning timer for remaining amount time
+    def timer(self, remaining, exercise, i):
+        if remaining > 0 and self.active_i == i: # recurse if greater than 0 and is active
+            self.dilation = self.root.after(1000, lambda: self.timer(remaining-1, exercise, i)) 
+            #updating button text
+            time_left = self.time_text(remaining)
+            self.li_buttons[i].config(text=f"{exercise["exercise"]} - {exercise["set"]} sets x {time_left}")
         else:
-            self.complete_set(exercise, i) #decrease set/delete
-
+            self.complete_set(exercise, i) # decrease set/delete 
 
     def complete_set(self, exercise, i):
         exercise["set"] -= 1 #decrease set
-    
         self.li_buttons[i].config(
             text=self.button_text(exercise), #change text
             bg= self.set_color(exercise["set"]) #change color
@@ -69,23 +92,15 @@ class GUI:
             self.check_if_finished()  #check if all exercises are done
 
 
-    def timer(self, remaining, exercise, i):
-        if remaining > 0:
-            #countdown with one sec and recurse while remaining
-            self.root.after(1000, lambda: self.timer(remaining-1, exercise, i)) 
-            time_left = f"{remaining} sec"
+    def time_text(self, time):
             # adding minutes if necessary
-            if remaining >= 60:
-                min=remaining//60
-                sec=remaining%60
-                time_left = f"{min}m  {sec}s"
-            #updating button text
-            self.li_buttons[i].config(text=f"{exercise["exercise"]} - {exercise["set"]} sets x {time_left}")
-        else:
-            self.complete_set(exercise, i) # decrease set/delete 
-            if self.li_buttons[i] != False:
-                self.li_buttons[i].config(state=tk.NORMAL) # unfreezing the button
-            
+            if time >= 60:
+                min=time//60
+                sec=time%60
+                return f"{min}m  {sec}s"
+            else:
+                return f"{time} sec"
+              
 
     def button_text(self, exercise):
         #button text generator
@@ -123,7 +138,9 @@ class GUI:
             if btn_num >= self.after_num: # if all exercises finished (min 5)
                 self.finish_button.config(text=f"Finished")
                 
-    def next_step(self): 
+    def next_step(self):
+        self.root.after_cancel(self.dilation) # stop dilation 
+        self.active_i = None
         self.current_step += 1 # increase step
         self.li_buttons.clear() # clear button array
         for widget in self.step_frame.winfo_children():

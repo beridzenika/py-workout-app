@@ -8,6 +8,7 @@ def main():
     data = manager.get_day_data() # get data
 
     gui = GUI(data)
+
     gui.run() # run gui
 
     if gui.completed: # if day done
