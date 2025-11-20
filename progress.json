@@ -1,0 +1,96 @@
+{
+    "current_day": 1,
+    "after_num": 5,
+    "history": [
+        {
+            "date": "2025-11-14 16:44:48",
+            "day": "Friday",
+            "exercises": [
+                {
+                    "exercise": "Bodyweight Squats",
+                    "type": "reps",
+                    "rep": 15,
+                    "set": 3
+                },
+                {
+                    "exercise": "Bulgarian Split Squats",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Glute Bridges",
+                    "type": "reps",
+                    "rep": 12,
+                    "set": 3
+                },
+                {
+                    "exercise": "Wall Sit",
+                    "type": "time",
+                    "duration": "max hold",
+                    "set": 3
+                },
+                {
+                    "exercise": "Calf Raises",
+                    "type": "time",
+                    "duration": 60,
+                    "set": 3
+                },
+                {
+                    "exercise": "Plank",
+                    "type": "time",
+                    "duration": 30,
+                    "set": 3
+                },
+                {
+                    "exercise": "Leg Raises",
+                    "type": "reps",
+                    "rep": 10,
+                    "set": 3
+                },
+                {
+                    "exercise": "Hollow Hold",
+                    "type": "time",
+                    "duration": 30,
+                    "set": 3
+                }
+            ]
+        },
+        {
+            "date": "2025-11-14 16:48:24",
+            "day": "Friday",
+            "exercises": [
+                {
+                    "exercise": "Burpees",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 2
+                },
+                {
+                    "exercise": "Jump Squats",
+                    "type": "reps",
+                    "rep": 10,
+                    "set": 3
+                },
+                {
+                    "exercise": "Push-up to Downward Dog",
+                    "type": "reps",
+                    "rep": 8,
+                    "set": 3
+                },
+                {
+                    "exercise": "Mountain Climbers",
+                    "type": "reps",
+                    "rep": 20,
+                    "set": 3
+                },
+                {
+                    "exercise": "Plank Shoulder Taps",
+                    "type": "reps",
+                    "rep": 20,
+                    "set": 3
+                }
+            ]
+        }
+    ]
+}

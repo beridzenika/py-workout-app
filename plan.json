@@ -1,5 +1,5 @@
 {
-    "current_day": 2,
+    "current_day": 1,
     "after_num": 5,
     "before": [
         {
@@ -149,7 +149,7 @@
                 {
                     "exercise": "Superman hold",
                     "type": "time",
-                    "duration": 20,
+                    "duration": 2,
                     "set": 3
                 }
             ]
@@ -190,7 +190,7 @@
                 {
                     "exercise": "Plank",
                     "type": "time",
-                    "duration": 3,
+                    "duration": 30,
                     "set": 3
                 },
                 {
